@@ -1,7 +1,7 @@
-# IAM-VFI : Interpolate Any Motion for Video Frame Interpolation with motion complexity map
+# IAM-VFI : Interpolate Any Motion for Video Frame Interpolation with motion complexity map [ECCV 2024]
 
 
-## ECCV2024 Poster & Paper
+## Paper & Poster
 
 ##Demo Video
 
