@@ -3,18 +3,16 @@
 
 ## Paper & Poster
 
-##Demo Video
+## Demo Video
 
 ## Datasets Download Link
+
 ### Train Dataset
 [Vimeo90K Training Dataset](http://toflow.csail.mit.edu/)
 ### Test Datasets
 [HD]
-
 [SNU-FILM](https://myungsub.github.io/CAIN/)
-
 [UVG]
-
 [Xiph2K&4K](https://github.com/sniklaus/softmax-splatting/blob/master/benchmark_xiph.py)
 
 ## Classification Data for IAM-VFI
