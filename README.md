@@ -2,7 +2,7 @@
 
 <div>
     <h4 align="center">
-        <a href="https://rlghksdbs.github.io/" target='_blank'>
+        <a href="https://rlghksdbs.github.io/iam-vfi_page" target='_blank'>
         <img src="https://img.shields.io/badge/🐳-Project%20Page-blue">
         </a>
         <a href="" target='_blank'>
