@@ -5,6 +5,9 @@
         <a href="https://rlghksdbs.github.io/" target='_blank'>
         <img src="https://img.shields.io/badge/🐳-Project%20Page-blue">
         </a>
+        <a href="" target='_blank'>
+        <img src="https://img.shields.io/badge/arXiv-Paper-b31b1b.svg">
+        </a>
     </h4>
 </div>
 
