@@ -12,7 +12,7 @@
 </div>
 
 ## Paper & Poster
-
+Paper is release after ECCV2024
 ## Demo Video
 
 ## Datasets Download Link
