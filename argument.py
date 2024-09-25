@@ -10,6 +10,7 @@ def add_argparse():
     parser.add_argument('--wandb-image', action='store_true', help='save wandb image')
 
     ## Training
+    parser.add_argument('--print-freq', default=4, type=float, help='show freq_print per epoch')
     parser.add_argument('--epoch', default=500, type=int)
     parser.add_argument('--log-path', type=str, default='train_single')
     parser.add_argument('-b', '--batch-size', default=64, type=int, help='minibatch size')

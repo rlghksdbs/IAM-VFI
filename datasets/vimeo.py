@@ -10,26 +10,14 @@ import torchvision.transforms.functional as F
 import time
 
 class vimeo_dataset():
-    def __init__(self, type, args, dataset_path, dataset, class_type=None, arbitrary=False, vimeo_septuplet_distance=[1], mix_dataset=[]):
+    def __init__(self, type, args, dataset_path, dataset):
         self.train_type = type
         self.dataset = dataset
         self.dataset_path = dataset_path    
-        self.arbitrary = arbitrary
-        self.vimeo_septuplet_distance = vimeo_septuplet_distance
-        self.mix_dataset = mix_dataset
-        self.vimeo_class_type = class_type
 
         if self.dataset == "vimeo_triplet":
             if self.train_type == 'train':
-                if self.mix_dataset == None:
-                    self.dataset_list = [os.path.join(self.dataset_path, '01_' + self.dataset, 'sequences')]
-                else:
-                    self.dataset_list = []
-                    for scale in self.mix_dataset:
-                        if scale == 'x1': 
-                            self.dataset_list.append(os.path.join(self.dataset_path, '01_' + self.dataset, 'sequences'))
-                        elif scale == 'x2':                    
-                            self.dataset_list.append(os.path.join(self.dataset_path, '02_' + self.dataset + '_x2', 'sequences'))
+                self.dataset_list = [os.path.join(self.dataset_path, '01_' + self.dataset, 'sequences')]
             else:
                 self.dataset_list = [os.path.join(self.dataset_path, '01_' + self.dataset, 'sequences')]
                 
@@ -58,15 +46,7 @@ class vimeo_dataset():
                 print('index: {}, dataset: {}, len(self.trainlist): {}\n'.format(index, self.dataset, len(self.trainlist)))
             img_path = self.trainlist[index]
             if self.dataset == "vimeo_triplet":
-                if self.mix_dataset is not None and len(self.mix_dataset) > 1:
-                    ind=[]
-                    for i, dataset_ in enumerate(self.dataset_list):
-                        if dataset_.find('vimeo_triplet'):
-                            ind.append(i)
-                    random.shuffle(ind)
-                    selected_dataset = ind[0]                    
-                else:
-                    selected_dataset = 0
+                selected_dataset = 0
             else:
                 selected_dataset = 0    
             img_path = os.path.join(self.dataset_list[selected_dataset], img_path)

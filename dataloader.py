@@ -20,8 +20,6 @@ class DataLoader(Dataset):
         self.dataset = args.datasets
         self.dataset_path = args.datasets_path
         self.batch_size = args.batch_size
-        self.mix_dataset = args.mix_dataset
-        self.vimeo_class_type = args.vimeo_class_type    # for ClassVFI
 
         #TI dataset
         self.split_data_path = args.split_data_path
@@ -49,7 +47,7 @@ class DataLoader(Dataset):
         if self.train_type == 'train':
             if 'vimeo_triplet' in self.dataset:
                 from datasets.vimeo import vimeo_dataset
-                self.dataset_class_list.append(vimeo_dataset(self.train_type, args, self.dataset_path, self.dataset[self.dataset.index("vimeo_triplet")], self.vimeo_class_type, self.arbitrary, mix_dataset=self.mix_dataset))
+                self.dataset_class_list.append(vimeo_dataset(self.train_type, args, self.dataset_path, self.dataset[self.dataset.index("vimeo_triplet")]))
             if 'ti_dataset' in self.dataset:
                 from datasets.ti_data import ti_dataset
                 self.dataset_class_list.append(ti_dataset(self.train_type, args, self.split_data_path, self.threshold1, self.threshold2, self.ti_type))
@@ -59,7 +57,7 @@ class DataLoader(Dataset):
                 self.dataset_class_list.append(ti_dataset(self.train_type, args, self.split_data_path, self.threshold1, self.threshold2, self.ti_type))
             else:
                 from datasets.vimeo import vimeo_dataset
-                self.dataset_class_list.append(vimeo_dataset(self.train_type, args, self.dataset_path, "vimeo_triplet", arbitrary=self.arbitrary, mix_dataset=self.mix_dataset))
+                self.dataset_class_list.append(vimeo_dataset(self.train_type, args, self.dataset_path, "vimeo_triplet"))
         
     def __len__(self):        
         sum=0
