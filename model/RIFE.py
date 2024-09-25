@@ -21,8 +21,7 @@ from collections import OrderedDict
 device = torch.device("cuda")
 
 class Model:
-    def __init__(self, local_rank=-1, classifier=False, classifier_intra_v2=False):
-        self.classifier = classifier
+    def __init__(self, local_rank=-1, classifier_intra_v2=False):
 
         if classifier_intra_v2 == True:
             self.flownet = Class_VFI_intra_v2() 

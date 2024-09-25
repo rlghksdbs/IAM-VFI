@@ -278,7 +278,7 @@ if __name__ == "__main__":
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     torch.backends.cudnn.benchmark = True
-    model = Model(local_rank=-1, classifier=args.classifier, classifier_intra_v2=args.classifier_intra_v2)
+    model = Model(local_rank=-1, classifier_intra_v2=args.classifier_intra_v2)
     
     train(model, args, arbitrary=args.arbitrary)
     

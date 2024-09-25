@@ -3,20 +3,20 @@ import argparse
 def add_argparse():
     parser = argparse.ArgumentParser()
 
+    ## Wandb
     parser.add_argument('--project-name', default='test', type=str, help='wandb project name')
     parser.add_argument('--wandb-name', default=None, type=str, help='wandb_name')
     parser.add_argument('--wandb-model', action='store_true', help='save wandb model')
     parser.add_argument('--wandb-image', action='store_true', help='save wandb image')
-    parser.add_argument('--print-freq', default=4, type=float, help='show freq_print per epoch')
+
+    ## Training
     parser.add_argument('--epoch', default=500, type=int)
     parser.add_argument('--log-path', type=str, default='train_single')
     parser.add_argument('-b', '--batch-size', default=64, type=int, help='minibatch size')
     parser.add_argument('--val-batch-size', default=32, type=int, help='minibatch size')
     parser.add_argument('--datasets-path', default='./data', type=str, help='dataset root path')
     parser.add_argument('--datasets', default=['vimeo_triplet'], nargs='+', type=str, help='vimeo_triplet')
-    parser.add_argument('--vimeo-class-type', default=None, type=str, help='[total, easy, medium, hard] for classVFI')
 
-    parser.add_argument('--mix-dataset', default=None, nargs='+', type=str, help='(can use only vimeo_triplet) x2,x3,x4')
     parser.add_argument('--patch-size-x', default=256, type=int, help='x patch size')
     parser.add_argument('--patch-size-y', default=256, type=int, help='y patch size')
     parser.add_argument('--init-lr', default=3e-4, type=float, help='initial learning rate')
@@ -28,9 +28,6 @@ def add_argparse():
     parser.add_argument('--rotate90', action='store_true', help='rotate 90 degree for augmentation')
     parser.add_argument('--rotate', action='store_true', help='rotate 1-89 degree for augmentation')
     parser.add_argument('--world-size', default=1, type=int, help='world size')
-    parser.add_argument('--pretrained-model-from', default=None, type=str, help='load pretrained model')    
-    parser.add_argument('--load-strict-false-flag', action='store_false', help='strict parameter when load pretrained model')
-    parser.add_argument('--load-freeze', action='store_true', help="freeze the loaded model")    
     
     parser.add_argument('--contrast', default=0.5, type=float, help='contrast strength for augmentaiton (0~1)')
     parser.add_argument('--brightness', default=0.5, type=float, help='brightness strength for augmentaiton (0~1)')    
@@ -41,9 +38,6 @@ def add_argparse():
     parser.add_argument('--aug-prob', default=0.0, type=float, help='augmentation probability from contrast to zoom')
     parser.add_argument('--cut-mix', default=0.0, type=float, help='augmentation probability from contrast to zoom')
     parser.add_argument('--arbitrary', action='store_true', help='enable arbitrary timestep(on/off)')
-
-    parser.add_argument('--synthesis-network', default='UNet', type=str,
-                        help='select Synthesis Network type (GridNet), (NafNet), (NAFNet_Simplify), (ConvNext), (UNet)')
     
     parser.add_argument('--pkl_model_path', default=None, help='pkl folder path')
     parser.add_argument('--pkl_name', default='flownet.pkl', help='dataset path')

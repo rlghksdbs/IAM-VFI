@@ -100,13 +100,23 @@ The datasets are organized as:
     ```
 ## Training
 1. Train Optical Flow Network with classified Datasets based on TI
-    ```
-    pyhon train.py
-    ```
+    
+    - Train FlowNet with easy dataset
+        ```
+        pyhon train.py --datasets "ti_dataset" --ti_type "easy"
+        ```    
+    - Train FlowNet with medium dataset
+        ```
+        pyhon train.py --datasets "ti_dataset" --ti_type "medium"
+        ```
+    - Train FlowNet with hard dataset
+        ```
+        pyhon train.py --datasets "ti_dataset" --ti_type "hard"
+        ```
 
-2. Train Overall Network
+2. Train Overall IAM-VFI Network
     ```
-    python Train_all.py
+    python train.py --datasets "vimeo_triplet" --classifier_intra_v2 --easy_pkl_model_path ./ckpt/flownet_easy.pkl --medium_pkl_model_path ./ckpt/flownet_medium.pkl --hard_pkl_model_path ./ckpt/flownet_hard.pkl
     ```
 ## Inference
 The code will be released soon
