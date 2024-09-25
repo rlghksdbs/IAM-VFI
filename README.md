@@ -29,8 +29,8 @@ The Docker environment used can be recreated using the ```Dockerfile```
 
 ## Datasets Download
 All the datasets for VFI used in the paper can be downloaded from the following locations:
-### Train Dataset : [Vimeo90K](http://toflow.csail.mit.edu/)
-### Test Datasets : [HD](https://github.com/baowenbo/MEMC-Net?tab=readme-ov-file), [SNU-FILM](https://myungsub.github.io/CAIN/), [UVG](https://ultravideo.fi/#testsequences), [Xiph2K&4K](https://github.com/sniklaus/softmax-splatting/blob/master/benchmark_xiph.py)
+#### Train Dataset : [Vimeo90K](http://toflow.csail.mit.edu/)
+#### Test Datasets : [HD](https://github.com/baowenbo/MEMC-Net?tab=readme-ov-file), [SNU-FILM](https://myungsub.github.io/CAIN/), [UVG](https://ultravideo.fi/#testsequences), [Xiph2K&4K](https://github.com/sniklaus/softmax-splatting/blob/master/benchmark_xiph.py)
 
 ## Prepare Data for training IAM-VFI
 1. Generate 2X Scale vimeo dataset called VimeoX2 (upscale with [EDSR](https://github.com/sanghyun-son/EDSR-PyTorch))
