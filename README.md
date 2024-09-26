@@ -5,7 +5,7 @@
         <a href="https://rlghksdbs.github.io/iam-vfi_page" target='_blank'>
         <img src="https://img.shields.io/badge/🐳-Project%20Page-blue">
         </a>
-        <a href="" target='_blank'>
+        <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02398.pdf" target='_blank'>
         <img src="https://img.shields.io/badge/arXiv-Paper-b31b1b.svg">
         </a>
     </h4>
