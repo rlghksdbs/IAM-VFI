@@ -1,5 +1,19 @@
 # IAM-VFI : Interpolate Any Motion for Video Frame Interpolation with motion complexity map [ECCV 2024]
 
+<div>    
+    <a href='https://rlghksdbs.github.io/' target='_blank'>Kihwan Yoon</a><sup>1</sup>&nbsp;
+    <a target='_blank'> Yong Han Kim</a><sup>2</sup>&nbsp;
+    <a target='_blank'>Sungjei Kim</a><sup>2</sup>
+    <a target='_blank'>Jinwoo Jeong</a><sup>2</sup>
+</div>
+
+<div>
+    <sup>1</sup>University of Seoul, South Korea
+</div>
+<div>
+    <sup>2</sup>Korea Electronics Technology Institute, South Korea
+</div>
+
 <div>
     <h4 align="center">
         <a href="https://rlghksdbs.github.io/iam-vfi_page" target='_blank'>
