@@ -26,6 +26,7 @@
         </a>
     </h4>
 </div>
+</div>
 
 ## Installation
 This repository is built in Docker
