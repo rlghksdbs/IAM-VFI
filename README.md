@@ -1,6 +1,6 @@
 <div align="center">
 
-# IAM-VFI : Interpolate Any Motion for Video Frame Interpolation with motion complexity map [ECCV 2024]
+# [IAM-VFI : Interpolate Any Motion for Video Frame Interpolation with motion complexity map](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02398.pdf) [ECCV 2024]
 
 <div>    
     <a href='https://rlghksdbs.github.io/' target='_blank'>Kihwan Yoon</a><sup>1</sup>&nbsp;
