@@ -140,4 +140,11 @@ The code will be released soon
 
 ## Citation
 ```
+@inproceedings{yoon2024iam,
+  title={IAM-VFI: Interpolate Any Motion for Video Frame Interpolation with Motion Complexity Map},
+  author={Yoon, Kihwan and Kim, Yong Han and Kim, Sungjei and Jeong, Jinwoo},
+  booktitle={European Conference on Computer Vision},
+  pages={461--477},
+  year={2024}
+}
 ```
